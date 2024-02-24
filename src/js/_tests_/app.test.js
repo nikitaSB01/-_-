@@ -10,9 +10,10 @@ test('created Team and add Pers', () => {
   expect(team.heroes[0]).toEqual(person);
 });
 
-test('created Team and add Pers', () => {
+test('team', () => {
   const team = new Team();
   const heroesArr = [];
+
   heroesArr.push(new Pers({
     name: 'Маг', type: 'Magician', health: 100, level: 2, attack: 20, defense: 15,
   }));
@@ -29,6 +30,7 @@ test('created Team and add Pers', () => {
 
   let counter = 0;
   for (const hero of team) {
-    expect(hero).toEqual(heroesArr[counter += 1]);
+    expect(hero).toEqual(heroesArr[counter]);
+    counter += 1;
   }
 });

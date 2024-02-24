@@ -1,4 +1,4 @@
-//  import Pers from './Pers';
+//  import Pers from './Pers.js';
 
 class Team {
   constructor() {
@@ -12,10 +12,10 @@ class Team {
   }
 
   [Symbol.iterator]() {
-    const { heroes, last } = this;
-    let current = 0;
+    const { heroes, quantity } = this;
+    //  let current = 0;
     function* next() {
-      for (current = 0; current < last; current += 1) {
+      for (let current = 0; current < quantity; current += 1) {
         yield heroes[current];
       }
     }
